@@ -2,11 +2,11 @@
 
 library(data.table)
 fileurl = 'https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip'
-setwd('C:/Users/Mustakim/Desktop/coursera/gettingcleaningdata/week4')
 if (!file.exists('./UCI HAR Dataset.zip')){
-        download.file(fileurl,'./UCI HAR Dataset.zip', mode = 'wb')
-        unzip("UCI HAR Dataset.zip", exdir = './')
+  download.file(fileurl,'./UCI HAR Dataset.zip', mode = 'wb')
+  unzip("UCI HAR Dataset.zip", exdir = getwd())
 }
+
 
 ## then i create script to read the data using R and convert data 
 features <- read.csv('./UCI HAR Dataset/features.txt', header = FALSE, sep = ' ')
