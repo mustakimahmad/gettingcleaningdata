@@ -36,6 +36,7 @@ data.all <- rbind(data.train, data.test)
 ## find mean and standard deviation for the data set
 
 mean_std.select <- grep('mean|std', features)
+
 data.sub <- data.all[,c(1,2,mean_std.select + 2)]
 
 activity.labels <- read.table('./UCI HAR Dataset/activity_labels.txt', header = FALSE)
